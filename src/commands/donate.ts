@@ -5,13 +5,11 @@
 
  import readline from 'readline';
 import { DonationOption } from '../types';
-import {clearState} from '../states/terminal.state';
 import Frames from '../utils/spinnerFrames';
 
 
 export const donateCommandHandler = async (sessionID:string) => {
      await loadSpinners(Frames.mainLoader);
-     await clearState(sessionID);
      await handleUserInput()
   };
 
